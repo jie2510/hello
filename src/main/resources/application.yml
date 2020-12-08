@@ -1,0 +1,22 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+mybatis-plus:
+#  #定义别名包 将实体对象的包路径进行封装.
+#  type-aliases-package: com.cy.pojo
+  #添加xml文件的依赖
+  mapper-locations: classpath:/*/*.xml
+
+logging:
+  level:
+    com: debug
+
